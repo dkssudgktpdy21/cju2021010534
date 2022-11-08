@@ -7,17 +7,17 @@ int main(void)
 {
 	srand(time(NULL));
 
-	int num = rand() % 99 + 1;       // ·£´ı ¼ıÀÚ Á¤ÇÏ±â
+	int num = rand() % 99 + 1;       // ëœë¤ ìˆ«ì ì •í•˜ê¸°
     int answer = 0;
-	int chance = rand() % 10 + 1;    // ·£´ı ±âÈ¸ Á¤ÇÏ±â
+	int chance = rand() % 7 + 3;    // ëœë¤ ê¸°íšŒ ì •í•˜ê¸°
 
-	while (chance > 0) // ±âÈ¸°¡ Á¸ÀçÇÏ´Â µ¿¾È
+	while (chance > 0) // ê¸°íšŒê°€ ì¡´ì¬í•˜ëŠ” ë™ì•ˆ
 	{
 		printf("%d chances left\n", chance--);
 		printf("choose a number(1~99): ");
 		scanf_s("%d", &answer);
 
-		if (answer > num)      // °¢ »óÈ²¿¡ ´ëÇÑ ¼±ÅÃ¹®
+		if (answer > num)      // ê° ìƒí™©ì— ëŒ€í•œ ì„ íƒë¬¸
 		{
 			printf("DOWN\n");
 		}
@@ -38,7 +38,7 @@ int main(void)
 		printf("Error Occurred\n\n");
 		}
 
-		if (chance == 0)  // ±âÈ¸°¡ ³¡³µÀ» ¶§
+		if (chance == 0)  // ê¸°íšŒê°€ ëë‚¬ì„ ë•Œ
 		{
 			printf("There is no chance left. do you want to do again?\n\n\n");
 			
